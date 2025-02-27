@@ -1,4 +1,4 @@
-FROM openjdk:20.0.2
+FROM openjdk:20
 
 WORKDIR /app
 
