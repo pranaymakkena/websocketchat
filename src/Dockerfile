@@ -2,11 +2,11 @@ FROM openjdk:20
 
 WORKDIR /app
 
-# Copy compiled .class files from the root 'out' folder
+# Copy compiled .class files (relative to root 'src/')
 COPY out/ .
 
-# Copy the 'lib' folder from inside 'src'
-COPY src/lib/ lib/
+# Copy the lib folder (relative to root 'src/')
+COPY lib/ lib/
 
 # Expose WebSocket port
 EXPOSE 8080
