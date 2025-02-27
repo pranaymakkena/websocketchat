@@ -24,7 +24,7 @@ body {
     flex-direction: column;
     height: 70vh; /* Reduced height */
     overflow: hidden;
-    margin-top: 20px; /* Added top margin */
+    margin-top: 10px; /* Added top margin */
 }
 
 .chat-header {
@@ -132,15 +132,15 @@ body {
 
 @media (max-width: 768px) {
     .chat-container {
-        width: 100%;
+        width: 90%;
         height: 80vh;
     }
 
     .input-container input {
-        width: 70%;
+        width: 65%;
     }
 
     .input-container button {
-        width: 25%;
+        width: 20%;
     }
 }
