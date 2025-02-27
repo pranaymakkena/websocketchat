@@ -1,0 +1,146 @@
+/* General reset and body styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #e5ddd5; /* WhatsApp-like background color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.chat-container {
+    width: 100%;
+    max-width: 600px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    height: 70vh; /* Reduced height */
+    overflow: hidden;
+    margin-top: 20px; /* Added top margin */
+}
+
+.chat-header {
+    background-color: #25D366; /* WhatsApp-like green */
+    color: #ffffff;
+    padding: 12px; /* Reduced padding */
+    font-size: 16px; /* Reduced font size */
+    text-align: center;
+    font-weight: 600;
+}
+
+.chat-box {
+    flex-grow: 1;
+    padding: 12px; /* Reduced padding */
+    overflow-y: auto;
+    background-color: #f0f0f0;
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 14px;
+    color: #333;
+}
+
+.chat-box .message {
+    margin-bottom: 8px; /* Reduced margin */
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.chat-box .message span {
+    font-size: 12px; /* Reduced font size */
+    color: #666;
+}
+
+.chat-box .message .message-text {
+    font-size: 14px; /* Reduced font size */
+    margin-top: 4px;
+    padding: 10px; /* Reduced padding */
+    border-radius: 18px;
+    background-color: #dcf8c6; /* Light green, Telegram-style */
+    max-width: 80%; /* Ensures it doesn't stretch too wide */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Slight shadow for bubble effect */
+    word-wrap: break-word; /* Allows long words to break */
+}
+
+/* Apply alternate background color for every other message */
+.chat-box .message:nth-child(even) .message-text {
+    background-color: #e1f7ff; /* Light blue for every even message */
+}
+
+.chat-box .message .timestamp {
+    font-size: 10px; /* Reduced font size */
+    color: #999;
+    position: absolute;
+    bottom: 4px;
+    right: 8px;
+    font-weight: lighter;
+}
+
+.input-container {
+    padding: 12px; /* Reduced padding */
+    background-color: #ffffff;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    border-top: 1px solid #e0e0e0;
+}
+
+.input-container input {
+    width: 80%;
+    padding: 10px; /* Reduced padding */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    font-family: 'Inter', sans-serif; /* Inter font applied */
+}
+
+.input-container input::placeholder {
+    font-family: 'Inter', sans-serif; /* Inter font applied to placeholder */
+    color: #999;
+}
+
+.input-container button {
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    padding: 10px 14px; /* Reduced padding */
+    background-color: #25D366; /* WhatsApp-like green */
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.input-container button:hover {
+    background-color: #128C7E; /* Darker WhatsApp-like green */
+}
+
+.typing-indicator {
+    padding: 8px 16px;
+    font-size: 14px;
+    color: #999;
+    display: none;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .chat-container {
+        width: 100%;
+        height: 80vh;
+    }
+
+    .input-container input {
+        width: 70%;
+    }
+
+    .input-container button {
+        width: 25%;
+    }
+}

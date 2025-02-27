@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebSocket Chat</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            <span>WebSocket Chat</span>
+        </div>
+        <div id="chat-box" class="chat-box"></div>
+        <div class="input-container">
+            <input type="text" id="name" placeholder="Enter your name...">
+            <input type="text" id="message" placeholder="Type a message..." onkeypress="if(event.key === 'Enter') document.getElementById('send').click();">
+            <button id="send">Send</button>
+        </div>
+        <div id="typing-indicator" class="typing-indicator"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
