@@ -1,5 +1,5 @@
 // Establish WebSocket connection dynamically
-const socket = new WebSocket(getWebSocketURL());
+const socket = new WebSocket("wss://websocketchat-vg29.onrender.com");
 
 // DOM elements
 const chatBox = document.getElementById('chat-box');
