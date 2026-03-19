@@ -99,7 +99,7 @@ socket.addEventListener('message', (event) => {
         } else if (data.type === 'join') {
             appendMessage(data.name, '', '', null, 'join');
 
-        } else if (data.type === 'leave') {
+        } else if (data.type === 'leave' && data.name) {
             appendMessage(data.name, '', '', null, 'leave');
         }
 

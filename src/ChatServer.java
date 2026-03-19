@@ -43,7 +43,8 @@ public class ChatServer extends WebSocketServer {
         userNames.remove(conn);
         userColors.remove(conn);
 
-        if (userName != null) {
+        // Only broadcast if user actually joined
+        if (userName != null && !userName.isEmpty()) {
             String leaveMessage = "{ \"type\": \"leave\", \"name\": \"" + escape(userName) + "\" }";
             broadcast(leaveMessage);
         }
