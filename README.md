@@ -45,7 +45,7 @@ Simply open `web/index.html` in your browser.
 1. Create a **new Web Service** on [Render](https://render.com/)
 2. Use this **Dockerfile**:
 ```dockerfile
-FROM openjdk:11
+FROM eclipse-temurin:21
 WORKDIR /app
 COPY src/ /app/
 RUN javac -cp .:lib/* ChatServer.java
